@@ -77,7 +77,7 @@ var downloadCSV = (event_id) => {
     from event_serial a 
     left join events b on a.event_id = b.id
     left join serial_main c on a.event_sub_id =c.id
-    where a.event_id=? limit 20`,event_id )
+    where a.event_id=?`,event_id )
     .then( rows => {
         if (rows.length>0)
         {
